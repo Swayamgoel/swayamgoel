@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swayam goel</title>
+    <link href="style.css" rel="stylesheet">
+     <link rel="icon" type="image/png" href="images/s.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span>Web Services</span>
+            <h1>Swayam goel</h1>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <br><br> <br><br>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="images/11234024.jpg" alt="Interior Design">
+                <h2>Hi i'm <span class="highlight">Swayam Goel</span></h2>
+                <p>A driven 12th grader with expertise in data analysis and web design who builds intelligent,
+                    dashboards and responsive websites that combine utility, creativity, and user-friendly design.</p>
+            </div>
+            <div class="grid-item divider">
+                <h2 class="text-center">Expertise!</h2>
+                <p>Stunning Web Designs for Every Business<br>Actionable Data Insights to Drive Success<br>Eye-Catching
+                    Graphics that Make an Impact</p>
+                <p class="tip">Let's create something amazing together. Contact Me today!<br>
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/3572691.jpg" alt="Sneaker Collaboration">
+                <h2>Design. <span class="highlight">Analyze. </span>Innovate.</h2>
+                <p>An innovative thinker and tech enthusiast who excels at data analysis and web design, producing
+                    solutions that strike a balance between performance and aesthetics.</p>
+            </div>
+        </div>
+        <!-- Hidden Menu -->
+       <div class="menu" id="menu">
+    <div class="menu-close" onclick="toggleMenu()">&times;</div>
+    <ul>
+        <a href="index.html">
+            <li class="hover-text">INDEX</li>
+        </a>
+        <li class="hover-text" onclick="navigateToSection('services')">SERVICES</li>
+        <li class="hover-text" onclick="navigateToSection('connect')">Let's Connect</li>
+        <a href="https://www.behance.net/gallery/230742217/Portfolio">
+            <li class="hover-text">Behance Portfolio</li>
+        </a>
+    </ul>
+</div>
+
+
+  <script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+
+    function navigateToSection(sectionId) {
+        // Smooth scroll to section
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+
+        // Close the menu after clicking
+        toggleMenu();
+    }
+</script>
+
+        <br>
+
+        <!-- about  -->
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <div class="about-heading">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I'm Swayam, a dedicated IT enthusiast with expertise in data research and web design. I design
+                        smart dashboards and responsive websites by fusing creativity and functionality to produce
+                        captivating digital experiences that address pressing issues and have a long-lasting effect.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const aboutContainer = document.querySelector('.about-container');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            aboutContainer.classList.add('show');
+                            observer.unobserve(aboutContainer); // Stop observing after first reveal
+                        }
+                    });
+                }, { threshold: 0.3 }); // Adjust threshold if needed
+
+                observer.observe(aboutContainer);
+            });
+        </script>
+
+
+        <!-- <script>
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.classList.contains('stats')) {
+                            animateCounters();
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3,
+            });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            function animateCounters() {
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const duration = 1500;
+                    const increment = Math.ceil(target / (duration / 20));
+
+                    const update = () => {
+                        count += increment;
+                        if (count < target) {
+                            counter.innerText = count;
+                            requestAnimationFrame(update);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    update();
+                });
+            }
+
+        </script> -->
+        <div class="text-center title-large">
+            <span>Skills</span>
+        </div>
+        <div class="section-s">
+            <h2>Using Now:</h2>
+            <div class="skills-grid">
+                <!-- Existing Skills -->
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg">
+                    <p>Photoshop</p>
+                </div>
+                <div class="skill"><img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg">
+                    <p>Tableau</p>
+                </div>
+                <div class="skill"><img src="https://cdn.worldvectorlogo.com/logos/power-bi-1.svg">
+                    <p>Power BI</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                    <p>HTML5</p>
+                </div>
+                <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                    <p>CSS3</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+                    <p>GitHub</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="images/excel.png" style="margin-right: 10px;">
+                    <p>Excel</p>
+                </div>
+                <div class="skill"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+                    <p>MongoDB</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="section-s">
+        <h2>Learning:</h2>
+        <div class="skills-grid">
+            <div class="skill"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg">
+                <p>Illustrator</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.worldvectorlogo.com/logos/sketch-2.svg">
+                <p>Sketch</p>
+            </div>
+            <div class="skill">
+                <img src="images/webflow.png">
+                <p>Webflow</p>
+            </div>
+            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+                <p>Figma</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.worldvectorlogo.com/logos/adobe-xd-2.svg">
+                <p>Adobe XD</p>
+            </div>
+        </div>
+        <div id="services"></div>
+    </div><br>
+    <div class="main-s">
+        <div class="services-container">
+            <div class="services-header">
+                <p>~ Services That I Provide ~</p>
+                <h1>My Special Service For Your<br>Development</h1>
+            </div>
+            <div class="service-box">
+                <div class="service-left">
+                    <p>01</p>
+                    <p>Graphic Designing</p>
+                    <h2>Designs That Speak</h2>
+                </div>
+                <div class="service-middle">
+                    <p>I combine creativity, accuracy, and originality to produce visually striking designs that make
+                        your
+                        ideas come to life and leave a lasting impression.</p>
+
+                </div>
+                <div class="service-right">
+                    <a href="graphicproject.html"><button>&#8599;</button></a>
+                    <p>View Projects</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-left">
+                    <p>02</p>
+                    <p>Website</p>
+                    <h2>Web Designing</h2>
+                </div>
+                <div class="service-middle">
+                    <p>I design beautiful, responsive websites that are optimized for all devices, enthrall your
+                        audience,
+                        increase interaction, and enhance your brand.</p>
+                </div>
+                <div class="service-right">
+                    <a href="webdevproject.html"><button>&#8599;</button></a>  <p>View Projects</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-left">
+                    <p>03</p>
+                    <p>Data Analysis</p>
+                    <h2>Dashboards and Reports</h2>
+                </div>
+                <div class="service-middle">
+                    <p>Using Tableau and Power BI to transform raw data into dynamic, sophisticated dashboards that will
+                        help you make better, quicker, and more informed business choices.</p>
+                </div>
+                <div class="service-right">
+                    <a href="dataproject.html"><button>&#8599;</button></a>  <p>View Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="text-center title-large">
+        <span>Feedback!</span>
+    </div>
+    </div>
+
+
+    <div class="cards-container">
+        <div class="card">
+            <p class="quote">"I couldn’t be more pleased with the result! From the start, he really took the time to
+                listen to what I needed and made sure he understood my vision. The communication was clear throughout
+                the entire process, and he kept everything on track."</p>
+            <div class="card-footer">
+                <img src="images/lovish.png" alt="Portrait">
+                <div>
+                    <div class="author">Lovish Arora</div>
+                    <div class="role">Financial Adivisor</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p class="quote">"I'm really happy with the outcome! From the start, Swayam Goel paid close attention,
+                grasped my vision, and provided me with just what I need. He kept everything on course from beginning to
+                end and maintained constant, clear communication. I'd strongly suggest collaborating with him.</p>
+            <div class="card-footer">
+                <img src="images/onkar.png" alt="Portrait">
+                <div>
+                    <div class="author">Onkar</div>
+                    <div class="role">Real Estate Business</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p class="quote">"Comprehensive, data-driven insights presented through powerful dashboards, elevating
+                Digital Root's project impact."
+            <pre>                                         </pre>
+            </p>
+            <br><br><br>
+            <div class="card-footer">
+                <img src="images/riddhi.png" alt="Portrait">
+                <div>
+                    <div class="author">Riddhi</div>
+                    <div class="role">MANAGER AT WILLAGE SPORTS</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <p class="quote">"Impressive Power BI dashboard with clear, actionable insights—perfectly tailored for
+                data-driven decision-making."
+            <pre>                                      </pre>
+            </p>
+            <br><br><br>
+            <div class="card-footer">
+                <img src="images/bhavesh.png" alt="Portrait">
+                <div>
+                    <div class="author">Bhavesh Malhotra</div>
+                    <div class="role">Student</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer" id="connect">
+        <footer class="footer">
+            <div class="footer-content">
+                
+                <h2>Let's Connect</h2>
+                <div class="foot-right">
+                <h3>Contact Details:</h3>
+                <p>+919464950467</p>
+                <p>swayamgoel4@gmail.com</p>
+            </div>
+                <div class="social-icons">
+                    <a href="https://github.com/Swayamgoel" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/swayam-goel-176712242/" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="https://www.behance.net/swayamgoel" target="_blank" aria-label="Behance">
+                        <i class="fa-brands fa-behance fa-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/919464950467" class="contact-item" target="_blank">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            </a>
+                    <a href="tel:+919464950467"><i class="fa-solid fa-phone-volume fa-2xl"></i></a>
+                    <a href="mailto:swayamgoel4@gmail.com"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+                    
+                </div><br>
+                <p>&copy; 2025 Swayam goel. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+</body>
+
+</html>
